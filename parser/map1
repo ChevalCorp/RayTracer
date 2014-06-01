@@ -1,0 +1,6 @@
+[Eye][X][Y][Z]
+[Sphere][X][Y][Z][Rayon][Color]
+[Projector][X][Y][Z][Color]
+[Cone][X][Y][Z][Rayon][Size][Color]
+[Plan][X][Y][Z][Color]
+[Cylindre][X][Y][Z][Rayon][Size][Color]
