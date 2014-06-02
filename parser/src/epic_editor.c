@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sun May 11 03:09:47 2014 Olivier Remy
-** Last update Sun May 11 07:16:48 2014 Olivier Remy
+** Last update Mon Jun  2 12:29:51 2014 Olivier Remy
 */
 
 #include	"epic_editor.h"
@@ -14,9 +14,10 @@ void		epic_editor(char *file)
 {
   int		fd;
   t_list	*list;
+  t_map		*map;
 
   fd = c_open(file, O_RDONLY);
   list = str_to_linelist(fd);
-  aff_list(list);
+  map = make_map(list);
   c_putchar('\n');
 }

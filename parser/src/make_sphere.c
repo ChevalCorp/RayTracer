@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Mon May 26 20:10:27 2014 Olivier Remy
-** Last update Sun Jun  1 02:11:01 2014 Olivier Remy
+** Last update Mon Jun  2 14:31:45 2014 Olivier Remy
 */
 
 #include	"epic_editor.h"
@@ -16,7 +16,7 @@ t_elem		*make_sphere(t_list *list)
   t_sphere	*sphere;
   t_cord	*cord;
 
-  if (list->length != 6)
+  if (list->length != 5)
     c_puterror("mauvais nombre d'arguments pour une sphere");
   cord = init_cord(c_getnbr(list->first->next->data),
 		   c_getnbr(list->first->next->next->data),

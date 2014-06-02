@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Fri May 30 08:41:04 2014 Olivier Remy
-** Last update Sun Jun  1 01:53:08 2014 Olivier Remy
+** Last update Mon Jun  2 14:35:41 2014 Olivier Remy
 */
 
 #include	"epic_editor.h"
@@ -21,11 +21,23 @@ void		check_enum(t_elem *elem, t_map *map)
   n = -1;
   key = init_enum();
   data = elem->data;
+  printf("data : %s\n", data);
   while (++n <= 5)
     if (c_strequal(key[n].key, data) == 1)
       {
+       	c_putnbr(n);
+	c_putchar('/');
         branch = split_list(elem);
-        leaf = (key[n].func)( branch);
-	add_elem(map->obj, leaf);
+	if (c_strequal(data, "Eye") == 1)
+	  {
+	    map->eye = make_eye(branch);
+	    return ;
+	  }
+	else
+	  {
+	    leaf = (key[n].func)(branch);
+	    add_elem(map->obj, leaf);
+	    return ;
+	  }
       }
 }

@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Thu May 29 19:13:09 2014 Olivier Remy
-** Last update Sun Jun  1 02:14:28 2014 Olivier Remy
+** Last update Mon Jun  2 14:05:12 2014 Olivier Remy
 */
 
 #include	"epic_editor.h"
@@ -16,7 +16,7 @@ t_elem		*make_cylindre(t_list *list)
   t_cylindre	*cylindre;
   t_cord	*cord;
 
-  if (list->length != 7)
+  if (list->length != 6)
     c_puterror("mauvais nombre d'arguments pour un cylindre");
   cord = init_cord(c_getnbr(list->first->next->data),
 		   c_getnbr(list->first->next->next->data),
