@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sat May 31 22:52:51 2014 Olivier Remy
-** Last update Mon Jun  2 12:31:37 2014 Olivier Remy
+** Last update Mon Jun  2 16:58:39 2014 Antoine Favarel
 */
 
 #include	"epic_editor.h"
@@ -22,7 +22,7 @@ t_list		*split_list(t_elem *elem)
   branch = init_list();
   while (elem != NULL)
     {
-      n = 0;
+      n = -1;
       elem = elem->next;
       data = elem->data;
       c_putstr(data);

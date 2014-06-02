@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Fri May 30 08:41:04 2014 Olivier Remy
-** Last update Mon Jun  2 14:35:41 2014 Olivier Remy
+** Last update Mon Jun  2 14:48:18 2014 Antoine Favarel
 */
 
 #include	"epic_editor.h"
@@ -21,10 +21,10 @@ void		check_enum(t_elem *elem, t_map *map)
   n = -1;
   key = init_enum();
   data = elem->data;
-  printf("data : %s\n", data);
   while (++n <= 5)
     if (c_strequal(key[n].key, data) == 1)
       {
+	printf("%s\n", key[n]);
        	c_putnbr(n);
 	c_putchar('/');
         branch = split_list(elem);
