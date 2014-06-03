@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sun May 11 03:48:29 2014 Olivier Remy
-** Last update Thu May 29 20:46:36 2014 Olivier Remy
+** Last update Tue Jun  3 18:49:26 2014 Olivier Remy
 */
 
 #ifndef		CLIST_H_
@@ -26,7 +26,7 @@ typedef	struct	s_list
   t_elem	*last;
 }		t_list;
 
-t_list		*str_to_linelist(const int fd);
+t_list		*str_to_linelist(const int fd, char c);
 t_list		*create_list(char **av);
 t_list		*init_list();
 t_elem		*init_elem(void	*data);

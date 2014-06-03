@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sat May 31 22:52:51 2014 Olivier Remy
-** Last update Mon Jun  2 16:58:39 2014 Antoine Favarel
+** Last update Tue Jun  3 18:27:37 2014 Olivier Remy
 */
 
 #include	"epic_editor.h"
@@ -20,18 +20,21 @@ t_list		*split_list(t_elem *elem)
 
   key = init_enum();
   branch = init_list();
+  elem = elem->next;
   while (elem != NULL)
     {
       n = -1;
-      elem = elem->next;
       data = elem->data;
-      c_putstr(data);
-      c_putchar('\n');
       while (++n <= 5)
 	if (c_strequal(key[n].key, data) == 1)
-	  return (branch);
+	  {
+	    free(key);
+	    return (branch);
+	  }
       leaf = init_elem(data);
       add_elem(branch, leaf);
+      elem = elem->next;
     }
+  free(key);
   return (branch);
 }

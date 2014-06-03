@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sun May 11 03:30:58 2014 Olivier Remy
-** Last update Sun Jun  1 02:07:47 2014 Olivier Remy
+** Last update Tue Jun  3 16:51:01 2014 Olivier Remy
 */
 
 #ifndef		DATA_H_
@@ -17,7 +17,13 @@
 # define	CONE 0x02
 # define	CYLINDRE 0x03
 # define	PLAN 0x04
-# define	PROJO 0x05
+# define	SPOT 0x05
+
+typedef	struct	s_token
+{
+  char		token;
+  void		(*func)(t_elem *elem);
+}		t_token;
 
 typedef	struct	s_key
 {
@@ -61,11 +67,11 @@ typedef	struct	s_plan
   int		color;
 }		t_plan;
 
-typedef	struct	s_projo
+typedef	struct	s_spot
 {
   t_cord	*cord;
   int		color;
-}		t_projo;
+}		t_spot;
 
 typedef	struct	s_eye
 {

@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sun May 11 04:59:13 2014 Olivier Remy
-** Last update Sun May 11 19:50:31 2014 Olivier Remy
+** Last update Tue Jun  3 18:48:14 2014 Olivier Remy
 */
 
 #ifndef		LANGC_H_
@@ -19,7 +19,7 @@
 # include	<stdlib.h>
 # include	<unistd.h>
 
-char		*c_getnextline(const int fd);
+char		*c_getnextline(const int fd, char c);
 char		*c_strdump(char *src, char c);
 char		*c_strcpy(char *src, char *cpy, char c);
 void		*c_realloc(void *str, size_t size);
