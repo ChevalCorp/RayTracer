@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Fri May 30 08:41:04 2014 Olivier Remy
-** Last update Tue Jun  3 17:20:21 2014 Olivier Remy
+** Last update Tue Jun  3 17:24:06 2014 Olivier Remy
 */
 
 #include	"epic_editor.h"
@@ -27,7 +27,7 @@ void		check_enum(t_elem *elem, t_map *map)
 	{
 	  branch = split_list(elem);
 	  if (c_strequal(data, "Eye") == 1)
-	    map->eye = make_eye(branch);
+	    map->eye = make_eye(branch, map);
 	  else
 	    {
 	      leaf = (key[n].func)(branch);

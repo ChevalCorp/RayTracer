@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sun May 11 03:23:27 2014 Olivier Remy
-** Last update Mon Jun  2 19:35:51 2014 Olivier Remy
+** Last update Tue Jun  3 17:29:08 2014 Olivier Remy
 */
 
 #ifndef		EPICEDITOR_H_
@@ -38,7 +38,7 @@ t_elem		*make_cone(t_list *list);
 t_elem		*make_cylindre(t_list *list);
 t_elem		*make_plan(t_list *list);
 t_elem		*make_spot(t_list *list);
-t_eye		*make_eye(t_list *list);
+t_eye		*make_eye(t_list *list, t_map *map);
 t_map		*make_map(t_list *list);
 /*
 **		inits
