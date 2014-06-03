@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sun May 11 03:09:47 2014 Olivier Remy
-** Last update Tue Jun  3 18:49:47 2014 Olivier Remy
+** Last update Tue Jun  3 19:28:15 2014 Olivier Remy
 */
 
 #include	"epic_editor.h"
@@ -18,6 +18,8 @@ void		epic_editor(char *file)
 
   fd = c_open(file, O_RDONLY);
   list = str_to_linelist(fd, '|');
+  if (list->first == NULL)
+    c_puterror("fichier lu vide");
   map = make_map(list);
   free(list);
   aff_map(map);
