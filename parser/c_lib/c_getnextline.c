@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sat Mar  1 14:07:15 2014 Olivier Remy
-** Last update Sun May 11 08:18:17 2014 Olivier Remy
+** Last update Mon Jun  2 16:10:02 2014 Olivier Remy
 */
 
 #include	"langc.h"
@@ -21,14 +21,14 @@ char            *c_getnextline(const int fd)
   i = 0;
   if (read(fd, &buff, 1) != 1)
     return (NULL);
-  while (read(fd, &buff, 1) == 1 && (buff != '\n' && buff != ']'))
+  ptr = c_realloc(ptr, sizeof(char) * (c_strlen(ptr, '\0') + 2));
+  ptr[i++] = buff;
+  ptr[i] = '\0';
+  while (read(fd, &buff, 1) == 1 && buff != '\n' && buff != '|')
     {
-      if (buff != '[')
-	{
-	  ptr = c_realloc(ptr, sizeof(char) * (c_strlen(ptr, '\0') + 2));
-	  ptr[i++] = buff;
-	  ptr[i] = '\0';
-	}
+      ptr = c_realloc(ptr, sizeof(char) * (c_strlen(ptr, '\0') + 2));
+      ptr[i++] = buff;
+      ptr[i] = '\0';
     }
   return (ptr);
 }

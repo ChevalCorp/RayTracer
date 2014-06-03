@@ -5,7 +5,7 @@
 ## Login   <remy_o@epitech.net>
 ## 
 ## Started on  Sun May 11 02:53:27 2014 Olivier Remy
-## Last update Sun Jun  1 01:48:30 2014 Olivier Remy
+## Last update Mon Jun  2 19:36:44 2014 Olivier Remy
 ##
 
 NAME1		= epic_editor
@@ -14,6 +14,16 @@ SRC1		= main.c \
 		src/epic_editor.c \
 		src/check_enum.c \
 		src/split_list.c \
+		src/aff_cone.c \
+		src/aff_cord.c \
+		src/aff_cylindre.c \
+		src/aff_eye.c \
+		src/aff_map.c \
+		src/aff_obj.c \
+		src/aff_plan.c \
+		src/aff_sphere.c \
+		src/aff_spot.c \
+		src/init_token.c \
 		src/init_cone.c \
 		src/init_cord.c \
 		src/init_cylindre.c \
@@ -21,14 +31,14 @@ SRC1		= main.c \
 		src/init_eye.c \
 		src/init_map.c \
 		src/init_plan.c \
-		src/init_projo.c \
+		src/init_spot.c \
 		src/init_sphere.c \
 		src/make_cone.c \
 		src/make_cylindre.c \
 		src/make_eye.c \
 		src/make_map.c \
 		src/make_plan.c \
-		src/make_projo.c \
+		src/make_spot.c \
 		src/make_sphere.c
 
 SRC4		= c_lib/str_to_linelist.c \

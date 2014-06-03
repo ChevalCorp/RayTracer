@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Mon May 26 20:33:51 2014 Olivier Remy
-** Last update Mon Jun  2 14:05:01 2014 Olivier Remy
+** Last update Mon Jun  2 20:34:23 2014 Olivier Remy
 */
 
 #include	"epic_editor.h"
