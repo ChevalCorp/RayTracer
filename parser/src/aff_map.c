@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Mon Jun  2 18:29:00 2014 Olivier Remy
-** Last update Tue Jun  3 16:52:28 2014 Olivier Remy
+** Last update Tue Jun  3 18:17:44 2014 Olivier Remy
 */
 
 #include	"epic_editor.h"
@@ -22,4 +22,5 @@ void		aff_map(t_map *map)
       aff_obj(obj);
       obj = obj->next;
     }
+  free(obj);
 }

@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sun May 11 05:36:59 2014 Olivier Remy
-** Last update Sun May 11 05:37:02 2014 Olivier Remy
+** Last update Tue Jun  3 18:10:36 2014 Olivier Remy
 */
 
 #include	"langc.h"
@@ -17,6 +17,9 @@ t_list		*str_to_linelist(const int fd)
 
   list = init_list();
   while ((tmp = c_getnextline(fd)) != NULL)
-    add_elem(list, init_elem(tmp));
+    {
+      add_elem(list, init_elem(tmp));
+      /*      free(tmp);*/
+    }
   return (list);
 }
