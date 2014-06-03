@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sun May 11 03:30:58 2014 Olivier Remy
-** Last update Mon Jun  2 18:20:15 2014 Olivier Remy
+** Last update Tue Jun  3 16:51:01 2014 Olivier Remy
 */
 
 #ifndef		DATA_H_
@@ -22,7 +22,7 @@
 typedef	struct	s_token
 {
   char		token;
-  void		(*func)(void);
+  void		(*func)(t_elem *elem);
 }		t_token;
 
 typedef	struct	s_key

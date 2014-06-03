@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Mon Jun  2 19:10:05 2014 Olivier Remy
-** Last update Mon Jun  2 20:30:39 2014 Olivier Remy
+** Last update Tue Jun  3 16:51:26 2014 Olivier Remy
 */
 
 #include	"epic_editor.h"
@@ -20,7 +20,7 @@ void		aff_obj(t_elem *obj)
   while (++n <= 5)
     {
       if (token[n].token == obj->token)
-	(token[n].func)();
+	(token[n].func)(obj);
     }
   c_putchar('\n');
 }
