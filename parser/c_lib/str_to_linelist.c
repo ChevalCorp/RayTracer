@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sun May 11 05:36:59 2014 Olivier Remy
-** Last update Tue Jun  3 19:26:42 2014 Olivier Remy
+** Last update Thu Jun  5 10:08:43 2014 Olivier Remy
 */
 
 #include	"langc.h"
@@ -15,7 +15,7 @@ static void		check_char(char *tmp, char c)
   int		n;
 
   n = -1;
-  if (tmp[0] = '\0')
+  if (tmp[0] == '\0')
     c_puterror("fichier lu corrompu");
   while (tmp[++n] != '\0')
     if (tmp[n] == c || tmp[n] == '\n')

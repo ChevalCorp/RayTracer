@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Mon May 26 18:42:07 2014 Olivier Remy
-** Last update Tue Jun  3 18:30:02 2014 Olivier Remy
+** Last update Tue Jun  3 20:01:05 2014 Olivier Remy
 */
 
 #include	"epic_editor.h"
@@ -20,6 +20,8 @@ t_map		*make_map(t_list *list)
   map = init_map();
   if (c_strequal((data = elem->data), "Eye") == 0)
     c_puterror("La première ligne du fichier de conf doit-être l'oeil");
+  if (elem == NULL)
+    c_puterror("veuillez entrer au moins objet");
   while (elem != NULL)
     {
       check_enum(elem, map);
