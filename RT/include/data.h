@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sun May 11 03:30:58 2014 Olivier Remy
-** Last update Tue Jun  3 16:51:01 2014 Olivier Remy
+** Last update Thu Jun  5 14:09:18 2014 Olivier Remy
 */
 
 #ifndef		DATA_H_
@@ -24,12 +24,6 @@ typedef	struct	s_token
   char		token;
   void		(*func)(t_elem *elem);
 }		t_token;
-
-typedef	struct	s_key
-{
-  char		*key;
-  t_elem	*(*func)(t_list *list);
-}		t_key;
 
 typedef	struct	s_cord
 {
@@ -79,12 +73,17 @@ typedef	struct	s_eye
   float		angl;
 }		t_eye;
 
+typedef	struct	s_win
+{
+  int		winx;
+  int		winy;
+}		t_win;
+
 typedef	struct	s_map
 {
+  t_win		*win;
   t_eye		*eye;
   t_list	*obj;
 }		t_map;
-
-# include	"langc.h"
 
 #endif /* DATA_H_ */

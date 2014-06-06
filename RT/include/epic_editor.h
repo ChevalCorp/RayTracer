@@ -5,13 +5,19 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sun May 11 03:23:27 2014 Olivier Remy
-** Last update Tue Jun  3 17:29:08 2014 Olivier Remy
+** Last update Thu Jun  5 14:11:23 2014 Olivier Remy
 */
 
 #ifndef		EPICEDITOR_H_
 # define	EPICEDITOR_H_
 
 # include	"data.h"
+
+typedef	struct	s_key
+{
+  char		*key;
+  t_elem	*(*func)(t_list *list);
+}		t_key;
 /*
 **		autres
 */
@@ -54,4 +60,4 @@ t_spot		*init_spot(t_cord *cord, int c);
 t_eye		*init_eye(t_cord *cord, float angl);
 t_map		*init_map();
 
-#endif		/* EPICEDITOR_H_ */
+#endif		/* !EPICEDITOR_H_ */

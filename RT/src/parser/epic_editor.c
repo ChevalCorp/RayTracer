@@ -5,12 +5,12 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sun May 11 03:09:47 2014 Olivier Remy
-** Last update Thu Jun  5 12:09:18 2014 Olivier Remy
+** Last update Fri Jun  6 08:42:47 2014 Olivier Remy
 */
 
 #include	"epic_editor.h"
 
-void		epic_editor(char *file)
+t_map		*epic_editor(char *file)
 {
   int		fd;
   t_list	*list;
@@ -21,7 +21,7 @@ void		epic_editor(char *file)
   if (list->first == NULL)
     c_puterror("fichier lu vide");
   map = make_map(list);
-  free(list);
   aff_map(map);
-  free(map);
+  free(list);
+  return (map);
 }
