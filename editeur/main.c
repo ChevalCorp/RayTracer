@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 ** 
 ** Started on  Wed Jun  4 18:01:54 2014 Valentin Cardon
-** Last update Sun Jun  8 18:27:41 2014 Maxime
+** Last update Sun Jun  8 19:56:18 2014 Maxime
 */
 
 #include	<stdlib.h>
@@ -43,6 +43,9 @@ int		main(int ac, char **av)
   s_data.rayon = NULL;
   s_data.angle = NULL;
   s_data.color = NULL;
+  s_data.rx = NULL;
+  s_data.ry = NULL;
+  s_data.rz = NULL;
   gtk_init(&ac, &av);
   pwindow = set_window();
   ptable = set_table(pwindow);
