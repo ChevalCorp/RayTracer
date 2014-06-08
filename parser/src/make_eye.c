@@ -5,21 +5,23 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Wed May 28 15:53:21 2014 Olivier Remy
-** Last update Mon Jun  2 14:32:43 2014 Olivier Remy
+** Last update Sun Jun  8 18:28:59 2014 Olivier Remy
 */
 
 #include	"epic_editor.h"
 
-t_eye		*make_eye(t_list *list)
+t_eye		*make_eye(t_list *list, t_map *map)
 {
   t_eye		*eye;
   t_cord	*cord;
 
+  if (map->eye != NULL)
+    c_puterror("un seul oeil par map est autorisé");
   if (list->length != 4)
     c_puterror("mauvais nombre d'arguments pour l'oeil");
-  cord = init_cord(c_getnbr(list->first->next->data),
-		   c_getnbr(list->first->next->next->data),
-		   c_getnbr(list->first->next->next->next->data));
+  cord = init_cord(c_getnbr(list->first->data),
+		   c_getnbr(list->first->next->data),
+		   c_getnbr(list->first->next->next->data));
   eye = init_eye(cord,
 		 c_getnbr(list->last->data));
   return (eye);

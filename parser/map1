@@ -1,6 +1,6 @@
-[Eye][1][1][1][1]
-[Sphere][1][1][1][1][1]
-[Projector][1][1][1][1]
-[Cone][1][1][1][1][1][1]
-[Plan][1][1][1][1]
-[Cylindre][1][1][1][1][1][1]
+Eye|X|Y|Z|angl
+Sphere|X|Y|Z|R|C
+Plan|X|Y|Z|C
+Cone|X|Y|Z|R|S|C
+Spot|X|Y|Z|C
+Cylindre|X|Y|Z|R|S|C
