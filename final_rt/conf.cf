@@ -1,0 +1,54 @@
+TYPE= plan;
+COOR= 0;0;80;
+COLO= 45;10;40;
+ROTA= 50;50;50;
+RAYO= 0;
+##
+TYPE= sphere;
+COOR= 0;80;5;
+COLO= 160;50;180;
+ROTA= 50;50;50;
+RAYO= 30;
+##
+TYPE= sphere;
+COOR= -5;100;20;
+COLO= 25;22;110;
+ROTA= 50;50;50;
+RAYO= 30;
+##
+TYPE= sphere;
+COOR= -10;30;25;
+COLO= 29;59;153;
+ROTA= 50;50;50;
+RAYO= 40;
+##
+TYPE= sphere;
+COOR= -5;50;100;
+COLO= 200;100;80;
+ROTA= 50;50;50;
+RAYO= 50;
+##
+TYPE= cone;
+COOR= 0;-10;-10;
+COLO= 175;55;125;
+ROTA= 50;50;50;
+RAYO= 15;
+##
+TYPE= cylindre;
+COOR= 0;-20;0;
+COLO= 55;17;100;
+ROTA= 50;50;50;
+RAYO= 42;
+##
+TYPE= cylindre;
+COOR= 100;-200;0;
+COLO= 100;100;100;
+ROTA= 0;0;0;
+RAYO= 50;
+##
+TYPE= spot;
+COOR= -200;0;0;
+COLO= 100;100;100;
+ROTA= 0;0;0;
+RAYO= 0;0;0;
+##
