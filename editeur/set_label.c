@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 ** 
 ** Started on  Thu Jun  5 20:05:54 2014 Valentin Cardon
-** Last update Sun Jun  8 19:39:32 2014 Maxime
+** Last update Sun Jun  8 20:43:55 2014 Valentin Cardon
 */
 
 #include	"header.h"
@@ -60,7 +60,7 @@ void		label_color(GtkWidget *ptable)
 
   color = gtk_label_new("Couleur");
   gtk_table_attach_defaults(GTK_TABLE(ptable), color,
-			    0, 1, 10, 11);
+			    0, 1, 13, 14);
 }
 
 void		set_label(GtkWidget *ptable)
@@ -69,4 +69,5 @@ void		set_label(GtkWidget *ptable)
   label_pos(ptable);
   label_oth(ptable);
   label_color(ptable);
+  label_rota(ptable);
 }

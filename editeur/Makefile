@@ -5,7 +5,7 @@
 ## Login   <cardon_v@epitech.net>
 ## 
 ## Started on  Fri Jun  6 12:10:41 2014 Valentin Cardon
-## Last update Sun Jun  8 17:24:23 2014 Maxime
+## Last update Sun Jun  8 20:47:47 2014 Valentin Cardon
 ##
 
 NAME		=	Edit-conf
@@ -19,10 +19,13 @@ CFLAGS		=	$(GTK)
 SRC		=	main.c		\
 			set_entry.c	\
 			set_entry2.c	\
+			set_entry3.c	\
 			set_table.c	\
 			set_label.c	\
+			set_label2.c	\
 			set_bouttons.c	\
 			set_bouttons2.c	\
+			set_bouttons3.c	\
 			my.c		\
 			edit_file.c	\
 			xmalloc.c	\

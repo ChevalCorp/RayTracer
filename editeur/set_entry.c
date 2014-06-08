@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 ** 
 ** Started on  Thu Jun  5 16:57:04 2014 Valentin Cardon
-** Last update Sun Jun  8 17:55:36 2014 Maxime
+** Last update Sun Jun  8 20:37:26 2014 Valentin Cardon
 */
 
 #include	"header.h"
@@ -108,9 +108,9 @@ void		entry_color(GtkWidget *ptable)
   gtk_box_pack_start(GTK_BOX(pvbox), pentry, TRUE, TRUE, 0);
   gtk_box_pack_start(GTK_BOX(pvbox2), pbutton, TRUE, TRUE, 0);
   gtk_table_attach_defaults(GTK_TABLE(ptable), pvbox,
-			    1, 6, 10, 11);
+			    1, 6, 13, 14);
   gtk_table_attach_defaults(GTK_TABLE(ptable), pvbox2,
-			    6, 7, 10, 11);
+			    6, 7, 13, 14);
   g_signal_connect(G_OBJECT(pbutton), "clicked", G_CALLBACK
 		   (button_color), (GtkWidget*) pvbox);
 }

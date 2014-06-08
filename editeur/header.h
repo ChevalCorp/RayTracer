@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 ** 
 ** Started on  Wed Jun  4 17:26:34 2014 Valentin Cardon
-** Last update Sun Jun  8 20:04:39 2014 Maxime
+** Last update Sun Jun  8 20:46:58 2014 Valentin Cardon
 */
 
 #ifndef		_HEADER_H_
@@ -49,6 +49,7 @@ void		*set_window();
 void		*set_table(GtkWidget *pwindow);
 void		set_entry(GtkWidget *ptable);
 void		set_label(GtkWidget *plabel);
+void		label_rota(GtkWidget *plabel);
 void		entry_obj(GtkWidget *ptable);
 void		entry_posx(GtkWidget *ptable);
 void		entry_posy(GtkWidget *ptable);
@@ -57,6 +58,9 @@ void		entry_ray(GtkWidget *ptable);
 void		entry_size(GtkWidget *ptable);
 void		entry_ang(GtkWidget *ptable);
 void		entry_color(GtkWidget *ptable);
+void		entry_rx(GtkWidget *ptable);
+void		entry_ry(GtkWidget *ptable);
+void		entry_rz(GtkWidget *ptable);
 void		button_valid(GtkWidget *ptable);
 void		button_valid(GtkWidget *ptable);
 void		on_quit_button(GtkWidget *widget, gpointer data);
@@ -68,5 +72,9 @@ void		button_ray(GtkWidget *pbutton, gpointer data);
 void		button_size(GtkWidget *pbutton, gpointer data);
 void		button_ang(GtkWidget *pbutton, gpointer data);
 void		button_color(GtkWidget *pbutton, gpointer data);
+void		button_rx(GtkWidget *pbutton, gpointer data);
+void		button_ry(GtkWidget *pbutton, gpointer data);
+void		button_rz(GtkWidget *pbutton, gpointer data);
+
 
 #endif		/*!HEADER_H_*/

@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 ** 
 ** Started on  Thu Jun  5 16:18:00 2014 Valentin Cardon
-** Last update Sun Jun  8 18:09:16 2014 Maxime
+** Last update Sun Jun  8 20:38:12 2014 Valentin Cardon
 */
 
 #include	"header.h"
@@ -14,7 +14,7 @@ void		*set_table(GtkWidget *pwindow)
 {
   GtkWidget	*ptable;
 
-  ptable  = gtk_table_new(13, 7, TRUE);
+  ptable  = gtk_table_new(16, 7, TRUE);
   gtk_container_add(GTK_CONTAINER(pwindow), GTK_WIDGET(ptable));
   return(ptable);
 }
@@ -31,7 +31,7 @@ void		button_quit(GtkWidget *ptable)
 		   "clicked", G_CALLBACK(write_and_quit),
 		   (GtkWidget*) pvbox);
   gtk_table_attach_defaults(GTK_TABLE(ptable), pvbox,
-			    1, 2, 12, 13);
+			    1, 2, 15, 16);
 }
 
 void		button_valid(GtkWidget *ptable)
@@ -46,7 +46,7 @@ void		button_valid(GtkWidget *ptable)
 		   "clicked", G_CALLBACK(clean_file),
 		   (GtkWidget*) pvbox);
   gtk_table_attach_defaults(GTK_TABLE(ptable), pvbox,
-			    5, 6, 12, 13);
+			    5, 6, 15, 16);
 }
 
 void		set_entry(GtkWidget *ptable)
@@ -59,6 +59,9 @@ void		set_entry(GtkWidget *ptable)
   entry_size(ptable);
   entry_ang(ptable);
   entry_color(ptable);
+  entry_rx(ptable);
+  entry_ry(ptable);
+  entry_rz(ptable);
   button_valid(ptable);
   button_quit(ptable);
 }
