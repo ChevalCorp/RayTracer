@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sun May 11 03:30:58 2014 Olivier Remy
-** Last update Sun Jun  8 20:47:42 2014 Olivier Remy
+** Last update Sun Jun  8 22:55:15 2014 Antoine Favarel
 */
 
 #ifndef		DATA_H_
@@ -18,6 +18,12 @@
 # define	CYLINDRE 0x03
 # define	PLAN 0x04
 # define	SPOT 0x05
+
+typedef	struct	s_tok
+{
+  char		tok;
+  void		(*func)(t_rt *rt, t_elem *elem);
+}		t_tok;
 
 typedef	struct	s_token
 {
