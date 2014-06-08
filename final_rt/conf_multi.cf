@@ -1,0 +1,24 @@
+TYPE= plan;
+COOR= 0;0;80;
+COLO= 45;10;40;
+ROTA= 50;50;50;
+RAYO= 0;
+##
+TYPE= spot;
+COOR= -150;0;20;
+COLO= 100;100;100;
+ROTA= 0;0;0;
+RAYO= 0;0;0;
+##
+TYPE= spot;
+COOR= -150;0;-20;
+COLO= 100;50;100;
+ROTA= 0;0;0;
+RAYO= 0;0;0;
+##
+TYPE= spot;
+COOR= -150;0;40;
+COLO= 100;150;100;
+ROTA= 0;0;0;
+RAYO= 0;0;0;
+##

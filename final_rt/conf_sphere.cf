@@ -1,0 +1,18 @@
+TYPE= plan;
+COOR= 0;0;80;
+COLO= 45;10;40;
+ROTA= 50;50;50;
+RAYO= 0;
+##
+TYPE= sphere;
+COOR= 0;0;-100;
+COLO= 160;50;180;
+ROTA= 50;50;50;
+RAYO= 42;
+##
+TYPE= spot;
+COOR= 200;0;0;
+COLO= 10;10;10;
+ROTA= 0;0;0;
+RAYO= 0;0;0;
+##
