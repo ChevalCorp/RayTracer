@@ -5,7 +5,7 @@
 ** Login   <nory_m@epitech.net>
 ** 
 ** Started on  Thu Jun  5 01:36:21 2014 Maxime
-** Last update Sun Jun  8 19:22:35 2014 Maxime
+** Last update Sun Jun  8 20:07:39 2014 Maxime
 */
 
 #include	"header.h"
@@ -46,6 +46,26 @@ void		put_str_in_file(char *str)
   fclose(fd);
 }
 
+char		*write_rotation(t_struct data, char *str, int i)
+{
+ int		k;
+
+  k = 0;
+  while (data.rx[k])
+    str[i++] = data.rx[k++];
+  k = 0;
+  str[i++] = '|';
+  while (data.ry[k])
+    str[i++] = data.ry[k++];
+  k = 0;
+  str[i++] = '|';
+  while (data.rz[k])
+    str[i++] = data.rz[k++];
+  str[i++] = '|';
+  str[i] = '\0';
+  return (str);
+}
+
 char		*write_coord(t_struct data, char *str, int i)
 {
   int		k;
@@ -63,6 +83,6 @@ char		*write_coord(t_struct data, char *str, int i)
   while (data.z[k])
     str[i++] = data.z[k++];
   str[i++] = '|';
-  str[i] = '\0';
+  str = write_rotation(data, str, i++);
   return (str);
 }

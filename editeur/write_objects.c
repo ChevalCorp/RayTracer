@@ -5,7 +5,7 @@
 ** Login   <nory_m@epitech.net>
 ** 
 ** Started on  Thu Jun  5 01:02:11 2014 Maxime
-** Last update Sun Jun  8 19:28:15 2014 Maxime
+** Last update Sun Jun  8 19:58:51 2014 Maxime
 */
 
 #include	"header.h"
@@ -54,6 +54,12 @@ void		fill_struct()
     s_data.angle = "0";
   if (s_data.color == NULL)
     s_data.color = "0";
+  if (s_data.rx == NULL)
+    s_data.rx = "0";
+ if (s_data.ry == NULL)
+    s_data.ry = "0";
+ if (s_data.rz == NULL)
+    s_data.rz = "0";
 }
 
 void		write_object()

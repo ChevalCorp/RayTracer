@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 ** 
 ** Started on  Wed Jun  4 17:26:34 2014 Valentin Cardon
-** Last update Sun Jun  8 19:55:26 2014 Maxime
+** Last update Sun Jun  8 20:04:39 2014 Maxime
 */
 
 #ifndef		_HEADER_H_
@@ -38,6 +38,7 @@ int		my_strcmp(char *s1, char *s2);
 void		*xmalloc(int size);
 void		clean_file();
 void		put_str_in_file(char *str);
+char		*write_rotation(t_struct data, char *str, int i);
 char		*write_coord(t_struct data, char *str, int i);
 char		*write_data(char *data, char *str, int i);
 char		*write_data_end(char *data, char *str, int i);
