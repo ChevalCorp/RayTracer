@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 ** 
 ** Started on  Wed Jun  4 17:26:34 2014 Valentin Cardon
-** Last update Sun Jun  8 19:36:55 2014 Maxime
+** Last update Sun Jun  8 19:55:26 2014 Maxime
 */
 
 #ifndef		_HEADER_H_
@@ -21,6 +21,9 @@ typedef	struct	s_struct
   char		*x;
   char		*y;
   char		*z;
+  char		*rx;
+  char		*ry;
+  char		*rz;
   char		*rayon;
   char		*size;
   char		*angle;
