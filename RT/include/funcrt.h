@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Thu Jun  5 14:23:01 2014 Olivier Remy
-** Last update Sun Jun  8 22:30:21 2014 Antoine Favarel
+** Last update Sun Jun  8 22:52:43 2014 Antoine Favarel
 */
 
 #ifndef		FUNCRT_H_
@@ -23,10 +23,10 @@ int		calc_k(t_rt *);
 int		calcul_pixel(t_rt *, int, int);
 void		image_fill(t_rt *);
 int		gere_key(int, t_rt *);
-void		inter_plan(t_eye *, t_obj *);
-void		inter_sphere(t_eye *, t_obj *);
-void		inter_cone(t_eye *, t_obj *);
-void		inter_cyl(t_eye *, t_obj *);
+void		inter_plan(t_rt *, t_elem *);
+void		inter_sphere(t_rt *, t_elem *);
+void		inter_cone(t_rt *, t_elem *);
+void		inter_cyl(t_rt *, t_elem *);
 void		screenshot(t_rt *);
 
 #endif		/* !FUNCRT_H_ */
