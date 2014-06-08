@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sun May 11 03:23:27 2014 Olivier Remy
-** Last update Tue Jun  3 17:29:08 2014 Olivier Remy
+** Last update Sun Jun  8 19:39:08 2014 Olivier Remy
 */
 
 #ifndef		EPICEDITOR_H_
@@ -29,7 +29,7 @@ void		aff_map(t_map *map);
 void		aff_obj(t_elem *elem);
 void		aff_plan(t_elem *elem);
 void		aff_sphere(t_elem *elem);
-void		aff_spot(t_elem *elem);
+void		aff_spot(t_list *spot);
 /*
 **		makes
 */
