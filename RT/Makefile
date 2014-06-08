@@ -5,7 +5,7 @@
 ## Login   <remy_o@epitech.net>
 ## 
 ## Started on  Sun May 11 02:53:27 2014 Olivier Remy
-## Last update Thu Jun  5 12:02:36 2014 Olivier Remy
+## Last update Sun Jun  8 22:30:13 2014 Antoine Favarel
 ##
 
 NAME1		= rt
@@ -39,7 +39,22 @@ SRC1		= main.c \
 		src/parser/make_map.c \
 		src/parser/make_plan.c \
 		src/parser/make_spot.c \
-		src/parser/make_sphere.c
+		src/parser/make_sphere.c \
+		src/rt/start_rt.c \
+		src/rt/rt_initialisation.c \
+		src/rt/aff_pixel.c \
+		src/rt/get_dot.c \
+		src/rt/get_color.c \
+		src/rt/put_pixel_to_img.c \
+		src/rt/calc_k.c \
+		src/rt/calcul_pixel.c \
+		src/rt/image_fill.c \
+		src/rt/gere_key.c \
+		src/rt/inter_plan.c \
+		src/rt/inter_sphere.c \
+		src/rt/inter_cone.c \
+		src/rt/inter_cyl.c \
+		src/rt/screenshot.c
 
 SRC4		= src/c_lib/str_to_linelist.c \
 		src/c_lib/init_elem.c \
