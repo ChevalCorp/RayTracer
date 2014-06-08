@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Thu Jun  5 14:23:01 2014 Olivier Remy
-** Last update Sun Jun  8 22:52:43 2014 Antoine Favarel
+** Last update Sun Jun  8 23:13:38 2014 Antoine Favarel
 */
 
 #ifndef		FUNCRT_H_
@@ -28,5 +28,6 @@ void		inter_sphere(t_rt *, t_elem *);
 void		inter_cone(t_rt *, t_elem *);
 void		inter_cyl(t_rt *, t_elem *);
 void		screenshot(t_rt *);
+t_cord		*init_eyes(int x, int y);
 
 #endif		/* !FUNCRT_H_ */

@@ -5,7 +5,7 @@
 ** Login   <lautel_m@epitech.net>
 ** 
 ** Started on  Mon Feb 24 11:24:55 2014 marc-aurele lautel
-** Last update Sat May 31 19:41:34 2014 marc-aurele lautel
+** Last update Sun Jun  8 23:25:05 2014 Antoine Favarel
 */
 
 #include	"rtv1.h"
@@ -57,9 +57,10 @@ void		rt_initialisation(t_rtv1 *rt)
   rt->end = NULL;
   rt->lenght = 0;
   rt->win->winx = 700;
-  rt->win->winy = 700;
+  rt->win->winy = 800;
   rt->img->imgx = 700;
-  rt->img->imgy = 700;
+  rt->img->imgy = 800;
+  pthread_mutex_init(&rt->mutex_lock, NULL);
 }
 
 int		main(int ac, char **av)

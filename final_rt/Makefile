@@ -5,14 +5,16 @@
 ## Login   <lautel_m@epitech.net>
 ## 
 ## Started on  Mon Feb 24 11:20:34 2014 marc-aurele lautel
-## Last update Fri Jun  6 17:40:02 2014 marc-aurele lautel
+## Last update Sun Jun  8 23:27:38 2014 Antoine Favarel
 ##
 
 NAME=	rtv1
 
 CC=	gcc
 
-CFLAGS= -Wall -Wextra -g
+CFLAGS=		-Wall -Wextra
+
+LDFLAGS=	-L /usr/lib -lmlx -L /usr/lib/X11 -lXext -lX11 -lm -lpthread -D_REENTRANT
 
 SRC=	list_double.c	\
 	set_obj.c	\
@@ -40,7 +42,7 @@ OBJ=	$(SRC:.c=.o)
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-		$(CC) -o $(NAME) $(OBJ) -L /usr/lib -lmlx -L /usr/lib/X11 -lXext -lX11 -lm
+		$(CC) -o $(NAME) $(OBJ) $(LDFLAGS)
 
 clean:
 	rm -f $(OBJ)

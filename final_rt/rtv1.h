@@ -5,20 +5,20 @@
 ** Login   <lautel_m@epitech.net>
 ** 
 ** Started on  Mon Feb 24 11:26:26 2014 marc-aurele lautel
-** Last update Sun Jun  8 20:24:22 2014 marc-aurele lautel
+** Last update Sun Jun  8 23:29:06 2014 Antoine Favarel
 */
 
-# ifndef	_RTV1_H_
-#define		_RTV1_H_
+#ifndef		_RTV1_H_
+# define	_RTV1_H_
 
-#include	<math.h>
-#include	<mlx.h>
-#include	<stdlib.h>
-#include	<signal.h>
-#include	<unistd.h>
-#include	<sys/types.h>
-#include	<sys/stat.h>
-#include	<fcntl.h>
+# include	<math.h>
+# include	<mlx.h>
+# include	<stdlib.h>
+# include	<signal.h>
+# include	<unistd.h>
+# include	<sys/types.h>
+# include	<sys/stat.h>
+# include	<fcntl.h>
 
 typedef	struct			s_color
 {
@@ -108,7 +108,16 @@ typedef	struct			s_rtv1
   struct	s_obj		*end;
   double			nb_spot;
   int				lenght;
+  pthread_mutex_t		mutex_lock;
 }				t_rtv1;
+
+typedef struct			s_regionrtv1
+{
+  t_rtv1			*rtv1;
+  int				y_start;
+  int				y_limit;
+}				t_regionrtv1;
+
 
 void	start_rt(t_rtv1 *);
 void	rt_initialisation(t_rtv1 *);

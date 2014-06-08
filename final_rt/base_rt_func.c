@@ -5,7 +5,7 @@
 ** Login   <lautel_m@epitech.net>
 ** 
 ** Started on  Tue Feb 25 14:41:02 2014 marc-aurele lautel
-** Last update Sun Jun  8 20:35:56 2014 marc-aurele lautel
+** Last update Sun Jun  8 23:31:29 2014 Antoine Favarel
 */
 
 #include	"rtv1.h"
@@ -83,26 +83,70 @@ void		re_init(t_obj *tmp)
   tmp->color->b = tmp->s_color->b;
 }
 
-void		image_fill(t_rtv1 *rt)
+void		*threading_part(void *region)
 {
+  t_regionrtv1	*r_rtv1;
+  t_rtv1	*rt;
   int		x;
   int		y;
-  int		k;
+  int		color;
 
-  y = 0;
-  rt->img->data = mlx_get_data_addr(rt->img->img_ptr, &rt->sbe->bpp, 
-				    &rt->sbe->sizeline, &rt->sbe->endian);
-  while (y < rt->img->imgy)
+  r_rtv1 = region;
+  rt = r_rtv1->rtv1;
+  y = r_rtv1->y_start;
+  while (y < r_rtv1->y_limit)
     {
       x = 0;
       while (x < rt->img->imgx)
-	{
-	  k = calcul_pixel(rt, x, y);
-	  aff_pixel(k, rt, x, y);
-	  x++;
-	}
+        {
+          pthread_mutex_lock (&(rt->mutex_lock));
+          color = calcul_pixel(rt, x, y);
+          aff_pixel(color, rt, x, y);
+          x++;
+          pthread_mutex_unlock (&(rt->mutex_lock));
+        }
+      pthread_mutex_lock (&(rt->mutex_lock));
+      mlx_put_image_to_window(rt->img->mlx_ptr,
+                          rt->img->win_ptr, rt->img->img_ptr, 0, 0);
+      pthread_mutex_unlock (&(rt->mutex_lock));
       y++;
     }
-  mlx_put_image_to_window(rt->img->mlx_ptr, 
-			  rt->img->win_ptr, rt->img->img_ptr, 0, 0);
+  return (NULL);
+}
+
+t_regionrtv1    *make_region(t_rtv1 *rt, int y_start, int y_limit)
+{
+  t_regionrtv1  *region;
+
+  region = malloc(sizeof(t_regionrtv1));
+  region->rtv1 = rt;
+  region->y_start = y_start;
+  region->y_limit = y_limit;
+  return (region);
+}
+
+void		image_fill(t_rtv1 *rt)
+{
+  pthread_t     pt_1;
+  pthread_t     pt_2;
+  pthread_t     pt_3;
+  pthread_t     pt_4;
+  t_regionrtv1  *region;
+
+  rt->img->data = mlx_get_data_addr(rt->img->img_ptr, &rt->sbe->bpp,
+                                    &rt->sbe->sizeline, &rt->sbe->endian);
+  region = make_region(rt, 0, 200);
+  pthread_create(&pt_1, NULL, &(threading_part), (void *)region);
+  region = make_region(rt, 200, 400);
+  pthread_create(&pt_2, NULL, &(threading_part), (void *)region);
+  region = make_region(rt, 400, 600);
+  pthread_create(&pt_3, NULL, &(threading_part), (void *)region);
+  region = make_region(rt, 600, 800);
+  pthread_create(&pt_4, NULL, &(threading_part), (void *)region);
+  pthread_join(pt_1, NULL);
+  pthread_join(pt_2, NULL);
+  pthread_join(pt_3, NULL);
+  pthread_join(pt_4, NULL);
+  mlx_put_image_to_window(rt->img->mlx_ptr,
+                          rt->img->win_ptr, rt->img->img_ptr, 0, 0);
 }

@@ -48,7 +48,7 @@ RAYO= 50;
 ##
 TYPE= spot;
 COOR= -200;0;0;
-COLO= 100;100;100;
+COLO= 10;10;10;
 ROTA= 0;0;0;
 RAYO= 0;0;0;
 ##
