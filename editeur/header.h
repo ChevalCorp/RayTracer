@@ -5,7 +5,7 @@
 ** Login   <cardon_v@epitech.net>
 ** 
 ** Started on  Wed Jun  4 17:26:34 2014 Valentin Cardon
-** Last update Sun Jun  8 20:46:58 2014 Valentin Cardon
+** Last update Sun Jun  8 20:55:38 2014 Maxime
 */
 
 #ifndef		_HEADER_H_
@@ -75,6 +75,5 @@ void		button_color(GtkWidget *pbutton, gpointer data);
 void		button_rx(GtkWidget *pbutton, gpointer data);
 void		button_ry(GtkWidget *pbutton, gpointer data);
 void		button_rz(GtkWidget *pbutton, gpointer data);
-
 
 #endif		/*!HEADER_H_*/
