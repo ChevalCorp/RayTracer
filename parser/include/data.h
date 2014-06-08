@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sun May 11 03:30:58 2014 Olivier Remy
-** Last update Tue Jun  3 16:51:01 2014 Olivier Remy
+** Last update Sun Jun  8 18:37:14 2014 Olivier Remy
 */
 
 #ifndef		DATA_H_
@@ -82,6 +82,7 @@ typedef	struct	s_eye
 typedef	struct	s_map
 {
   t_eye		*eye;
+  t_list	*spot;
   t_list	*obj;
 }		t_map;
 
