@@ -5,12 +5,12 @@
 ## Login   <cardon_v@epitech.net>
 ## 
 ## Started on  Fri Jun  6 12:10:41 2014 Valentin Cardon
-## Last update Sun Jun  8 20:47:47 2014 Valentin Cardon
+## Last update Sun Jun  8 20:54:49 2014 Maxime
 ##
 
 NAME		=	Edit-conf
 
-GTK		=	$(shell pkg-config --cflags --libs gtk+-2.0) 
+GTK		=	$(shell pkg-config --cflags --libs gtk+-2.0)
 
 CC		=	gcc -lgthread-2.0
 
@@ -38,7 +38,7 @@ TMP		=	$(SRC:.c=.c~)
 all		:	$(NAME)
 
 $(NAME)		:	$(OBJ)
-			@$(CC) -o $(NAME) $(OBJ) $(shell pkg-config --cflags --libs gtk+-2.0) 
+			@$(CC) -o $(NAME) $(OBJ) $(shell pkg-config --cflags --libs gtk+-2.0)
 clean		:
 			rm -rf $(OBJ) $(TMP)
 
