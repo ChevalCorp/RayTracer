@@ -1,6 +1,6 @@
-Eye|X|Y|Z|angl
-Sphere|X|Y|Z|R|C
-Plan|X|Y|Z|C
-Cone|X|Y|Z|R|S|C
-Spot|X|Y|Z|C
-Cylindre|X|Y|Z|R|S|C
+Eye|X|Y|Z|Rx|Ry|Rz
+Sphere|X|Y|Z|Rx|Ry|Rz|R|C
+Plan|X|Y|Z||Rx|Ry|Rz|C
+Cone|X|Y|Z|Rx|Ry|Rz|R|S|C
+Spot|X|Y|Z|Rx|Ry|Rz|C
+Cylindre|X|Y|Z|Rx|Ry|Rz|R|S|C

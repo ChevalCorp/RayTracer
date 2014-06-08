@@ -5,7 +5,7 @@
 ## Login   <remy_o@epitech.net>
 ## 
 ## Started on  Sun May 11 02:53:27 2014 Olivier Remy
-## Last update Mon Jun  2 19:36:44 2014 Olivier Remy
+## Last update Sun Jun  8 21:02:42 2014 Olivier Remy
 ##
 
 NAME1		= epic_editor
@@ -42,6 +42,7 @@ SRC1		= main.c \
 		src/make_sphere.c
 
 SRC4		= c_lib/str_to_linelist.c \
+		c_lib/chose_elem.c \
 		c_lib/init_elem.c \
 		c_lib/init_list.c \
 		c_lib/create_list.c \

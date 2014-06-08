@@ -5,7 +5,7 @@
 ** Login   <remy_o@epitech.net>
 **
 ** Started on  Sun May 11 03:30:58 2014 Olivier Remy
-** Last update Sun Jun  8 18:37:14 2014 Olivier Remy
+** Last update Sun Jun  8 20:47:42 2014 Olivier Remy
 */
 
 #ifndef		DATA_H_
@@ -41,6 +41,7 @@ typedef	struct	s_cord
 typedef	struct	s_sphere
 {
   t_cord	*cord;
+  t_cord	*rot;
   int		rayon;
   int		color;
 }		t_sphere;
@@ -48,6 +49,7 @@ typedef	struct	s_sphere
 typedef	struct	s_cone
 {
   t_cord	*cord;
+  t_cord	*rot;
   int		rayon;
   int		size;
   int		color;
@@ -56,6 +58,7 @@ typedef	struct	s_cone
 typedef	struct	s_cylindre
 {
   t_cord	*cord;
+  t_cord	*rot;
   int		rayon;
   int		size;
   int		color;
@@ -64,19 +67,21 @@ typedef	struct	s_cylindre
 typedef	struct	s_plan
 {
   t_cord	*cord;
+  t_cord	*rot;
   int		color;
 }		t_plan;
 
 typedef	struct	s_spot
 {
   t_cord	*cord;
+  t_cord	*rot;
   int		color;
 }		t_spot;
 
 typedef	struct	s_eye
 {
   t_cord	*cord;
-  float		angl;
+  t_cord	*rot;
 }		t_eye;
 
 typedef	struct	s_map
