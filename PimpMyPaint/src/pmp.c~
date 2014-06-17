@@ -1,0 +1,19 @@
+#include	"pmp.h"
+
+void		pmp(void)
+{
+  t_mlx		*mlx;
+  t_pxl		*pxl;
+
+  printf("b\n");
+  mlx = init_mlx();
+  printf("a");
+  pxl = init_pxl();
+  printf("l");
+  remplis_image(mlx, pxl);
+  mlx->win_ptr = mlx_new_window(mlx->mlx_ptr, mlx->xwin, mlx->ywin, "rtv1 winfow");
+  mlx_expose_hook(mlx->win_ptr, gere_expose, mlx);
+  mlx_key_hook(mlx->win_ptr, gere_key, mlx);
+  mlx_loop(mlx->mlx_ptr);
+  printf("NICKEL !!!\n");
+}

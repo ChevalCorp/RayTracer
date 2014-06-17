@@ -1,0 +1,21 @@
+#include	"pmp.h"
+
+void		remplis_image(t_mlx *mlx, t_pxl *pxl)
+{
+  pxl->r = 0xFF;
+  pxl->v = 0xFF;
+  pxl->b = 0xFF;
+  while (pxl->x < mlx->xwin)
+    {
+      printf("e\n");
+      pxl->y = 0;
+      while (pxl->y < mlx->ywin)
+	{
+	  printf("e\n");
+	  pixel_put_to_image(pxl, mlx);
+	  printf("e\n");
+	  pxl->y++;
+	}
+      pxl->x++;
+    }
+}
